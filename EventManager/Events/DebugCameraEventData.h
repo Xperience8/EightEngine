@@ -9,7 +9,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	DebugCameraEventData(bool debugCameraStatus)
+	explicit DebugCameraEventData(bool debugCameraStatus)
 		: m_DebugCameraStatus(debugCameraStatus) { }
 	~DebugCameraEventData() { }
 

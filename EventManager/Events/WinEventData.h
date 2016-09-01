@@ -9,7 +9,7 @@ class WinEventData : public IEventData
 public:
 	static const ULONG s_TYPE;
 
-	WinEventData(UINT status = 0) : m_Status(status)  { }
+	explicit WinEventData(UINT status = 0) : m_Status(status)  { }
 	~WinEventData() { }
 
 	UINT GetStatus() const { return m_Status; }

@@ -67,7 +67,7 @@ class PhysXGamePhysics
 {
 public:
 	PhysXGamePhysics() : m_pFoundation(nullptr), m_pPhysics(nullptr),
-		m_pScene(nullptr), m_pControllerManager(nullptr), m_pCpuDispatcher(nullptr) { }
+		m_pScene(nullptr), m_pControllerManager(nullptr), m_pCpuDispatcher(nullptr), m_ElapsedTime(0.f) { }
 	~PhysXGamePhysics() { }
 
 	// Physx is initialized and basic scene with basic rules is created

@@ -23,7 +23,7 @@ struct ModelCBData
 	DirectX::XMFLOAT4X4 WorldInverseTransposeMatrix;
 
 	ModelCBData() { }
-	ModelCBData(DirectX::CXMMATRIX worldMatrix)
+	explicit ModelCBData(DirectX::CXMMATRIX worldMatrix)
 	{
 		DirectX::XMStoreFloat4x4(&WorldMatrix, DirectX::XMMatrixTranspose(worldMatrix));
 		DirectX::XMStoreFloat4x4(&WorldInverseTransposeMatrix, InverseTranspose(worldMatrix));
@@ -55,7 +55,7 @@ struct MaterialCBData
 	LightMaterial Material;
 
 	MaterialCBData() { }
-	MaterialCBData(const LightMaterial &material) : Material(material) { }
+	explicit MaterialCBData(const LightMaterial &material) : Material(material) { }
 };
 struct LightCBData
 {
@@ -64,7 +64,7 @@ struct LightCBData
 	DirectionalLight DirectionalLightData;
 
 	LightCBData() { }
-	LightCBData(const DirectionalLight &dirLight) : DirectionalLightData(dirLight) { }
+	explicit LightCBData(const DirectionalLight &dirLight) : DirectionalLightData(dirLight) { }
 };
 struct TerrainCBData
 {
@@ -73,7 +73,7 @@ struct TerrainCBData
 	DirectX::XMFLOAT2 TextureScaling;
 
 	TerrainCBData() { }
-	TerrainCBData(const DirectX::XMFLOAT2 &textureScale) : TextureScaling(textureScale) { }
+	explicit TerrainCBData(const DirectX::XMFLOAT2 &textureScale) : TextureScaling(textureScale) { }
 };
 struct TextCBData
 {

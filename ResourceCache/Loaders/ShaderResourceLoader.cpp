@@ -23,10 +23,8 @@ typedef ResourceHandle<ShaderBase> ShaderResourceHandle;
 
 ShaderResourceLoader::ShaderResourceLoader(
 	const std::shared_ptr<RenderingStatesCache> &pRenderingStatesCache,
-	const std::string &shaderConfigName) : m_pRenderingStatesCache(pRenderingStatesCache)
+	const std::string &shaderConfigName) : m_pRenderingStatesCache(pRenderingStatesCache), m_pShaderConfig(g_ResourceCache.RequestResource<XmlDocument>(shaderConfigName))
 {
-	m_pShaderConfig = g_ResourceCache.RequestResource<XmlDocument>(shaderConfigName);
-
 	CreateInputLayoutsDesc();
 }
 

@@ -7,7 +7,7 @@ protected:
 	bool m_IsInitialized;
 
 public:
-	ResourceHandleBase(const std::string &resourceName) : m_ResourceName(resourceName),
+	explicit ResourceHandleBase(const std::string &resourceName) : m_ResourceName(resourceName),
 		m_IsInitialized(false) { }
 	virtual ~ResourceHandleBase() { }
 

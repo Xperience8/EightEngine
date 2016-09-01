@@ -19,7 +19,7 @@ private:
 	BYTE *m_pRawMemory;
 	BYTE *m_pHead;
 public:
-	MemoryPool(char *poolName) : m_pRawMemory(nullptr), m_pHead(nullptr), 
+	explicit MemoryPool(char *poolName) : m_pRawMemory(nullptr), m_pHead(nullptr), 
 		m_NumChunks(0), m_ChunkSize(0) 
 	{ 
 #if defined(_DEBUG)

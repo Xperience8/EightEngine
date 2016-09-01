@@ -11,7 +11,7 @@ class RenderingDevice;
 class GridRenderComponent : public RenderComponent
 {
 public:
-	GridRenderComponent() : m_TotalWidth(0.f), m_TotalDepth(0.f), 
+	GridRenderComponent() : m_TotalWidth(0.f), m_TotalDepth(0.f), m_CellSpace(0.f),
 		m_TextureScaling(1.f, 1.f) { }
 	~GridRenderComponent() { }
 

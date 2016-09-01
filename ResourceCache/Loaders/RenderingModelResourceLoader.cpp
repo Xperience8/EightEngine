@@ -139,7 +139,9 @@ void RenderingModelResourceLoader::LoadMaterial(Material &renderingMaterial,
 		USHORT textureNameSize = memoryReader.ReadMemory<USHORT>();
 		std::string textureName(memoryReader.ReadMemoryArray<char>(
 			textureNameSize), textureNameSize);
-		TextureType textureType = memoryReader.ReadMemory<TextureType>();
+		
+		//TextureType textureType = memoryReader.ReadMemory<TextureType>();
+		memoryReader.ReadMemory<TextureType>();
 
 		renderingMaterial.AddTexture(g_ResourceCache.RequestResource<Texture2D>(
 			textureName));

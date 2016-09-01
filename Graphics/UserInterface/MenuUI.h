@@ -9,7 +9,7 @@
 class MenuUI : public IUserInterface
 {
 public:
-	MenuUI() { }
+	MenuUI() : m_pWorkingLayout(nullptr) { }
 	~MenuUI() { }
 
 

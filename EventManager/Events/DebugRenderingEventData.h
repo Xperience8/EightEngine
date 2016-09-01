@@ -9,7 +9,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	DebugRenderingEventData(bool debugRenderingStatus) 
+	explicit DebugRenderingEventData(bool debugRenderingStatus) 
 		: m_DebugRenderingStatus(debugRenderingStatus) { }
 	~DebugRenderingEventData() { }
 

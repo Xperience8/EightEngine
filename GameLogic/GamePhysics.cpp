@@ -78,9 +78,10 @@ bool PhysXGamePhysics::StartUp()
 		return false;
 	}
 
-	bool trackAllocations = false;
 #if defined _DEBUG
-	trackAllocations = true;
+	bool trackAllocations = true;
+#else
+	bool trackAllocations = false;
 #endif
 
 	// Create physics

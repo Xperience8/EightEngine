@@ -11,7 +11,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	NewActorEventData(const std::shared_ptr<Actor> &pActor) : m_pActor(pActor) { }
+	explicit NewActorEventData(const std::shared_ptr<Actor> &pActor) : m_pActor(pActor) { }
 	~NewActorEventData() { }
 
 	std::shared_ptr<Actor> &GetActor() { return m_pActor; }

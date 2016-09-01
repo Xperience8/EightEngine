@@ -7,7 +7,7 @@ class OpenExitDoorEventData : public IEventData
 public:
 	static const ULONG s_TYPE;
 
-	OpenExitDoorEventData(bool doorStatus) : m_DoorStatus(doorStatus) { }
+	explicit OpenExitDoorEventData(bool doorStatus) : m_DoorStatus(doorStatus) { }
 	~OpenExitDoorEventData() { }
 
 	bool GetDoorStatus() const { return m_DoorStatus; }

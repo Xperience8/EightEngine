@@ -7,7 +7,7 @@ class JumpEventData : public IEventData
 public:
 	static const ULONG s_TYPE;
 
-	JumpEventData(bool jump) : m_Jump(jump) { }
+	explicit JumpEventData(bool jump) : m_Jump(jump) { }
 	~JumpEventData() { }
 
 	ULONG VGetEventDataType() const override { return s_TYPE; }
@@ -24,7 +24,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	EnableInputEventData(bool enableInput) : m_EnableInput(enableInput) { }
+	explicit EnableInputEventData(bool enableInput) : m_EnableInput(enableInput) { }
 	~EnableInputEventData() { }
 
 	bool IsJumpDisabled() const { return m_EnableInput; }

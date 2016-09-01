@@ -27,7 +27,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	ShowMouseCursorEventData(bool isVisible) : m_IsVisible(isVisible) { }
+	explicit ShowMouseCursorEventData(bool isVisible) : m_IsVisible(isVisible) { }
 	~ShowMouseCursorEventData() { }
 
 	bool GetCursorVisibility() const { return m_IsVisible; }
@@ -42,7 +42,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	MovementEventData(DirectX::XMFLOAT3 &movementDirection)
+	explicit MovementEventData(DirectX::XMFLOAT3 &movementDirection)
 		: m_MovementDirection(movementDirection) { }
 	~MovementEventData() { }
 
@@ -59,7 +59,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	RightMouseButtonEventData(bool status) : m_Status(status) { }
+	explicit RightMouseButtonEventData(bool status) : m_Status(status) { }
 	~RightMouseButtonEventData() { }
 	
 	bool GetStatus() const { return m_Status; }

@@ -8,7 +8,7 @@ class PhysXCharacterPhysicsComponent;
 class ControllerHitReport : public physx::PxUserControllerHitReport
 {
 public:
-	ControllerHitReport(PhysXCharacterPhysicsComponent *pPhysicsComponent) :
+	explicit ControllerHitReport(PhysXCharacterPhysicsComponent *pPhysicsComponent) :
 		m_pPhysicsComponent(pPhysicsComponent) { }
 
 	void onShapeHit(const physx::PxControllerShapeHit &hit) override;
@@ -30,7 +30,7 @@ class PhysXCharacterPhysicsComponent : public PhysicsComponent
 {
 public:
 	PhysXCharacterPhysicsComponent() : m_pController(nullptr), m_GravityScaleFactor(0.025f),
-		m_HitReport(this), m_ContactNormal(0.f, 1.f, 0.f) { }
+		m_HitReport(this), m_ContactNormal(0.f, 1.f, 0.f), m_ShouldFall(false) { }
 	~PhysXCharacterPhysicsComponent() 
 	{ 
 		if (m_pController)

@@ -9,7 +9,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	DestroyActorEventData(UINT ActorID) : m_ActorID(ActorID) { }
+	explicit DestroyActorEventData(UINT ActorID) : m_ActorID(ActorID) { }
 	~DestroyActorEventData() { }
 
 	ULONG VGetEventDataType() const override { return s_TYPE; }

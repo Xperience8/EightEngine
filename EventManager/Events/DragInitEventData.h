@@ -12,7 +12,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	DragInitEventData(UINT ActorID) : m_ActorID(ActorID) { }
+	explicit DragInitEventData(UINT ActorID) : m_ActorID(ActorID) { }
 	DragInitEventData(UINT ActorID, std::weak_ptr<GameCamera> &pCamera) 
 		: m_ActorID(ActorID), m_pCamera(pCamera) { }
 	~DragInitEventData() { }

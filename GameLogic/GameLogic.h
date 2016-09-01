@@ -22,7 +22,7 @@ enum class GameState
 class BaseGameLogic
 {
 public:
-	BaseGameLogic() { }
+	BaseGameLogic() : m_GameLogicState(GameState::GS_INVALID) { }
 	~BaseGameLogic() { }
 
 	// Actor is created and it is registered inside actor map

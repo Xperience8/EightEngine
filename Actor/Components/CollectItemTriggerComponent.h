@@ -16,7 +16,7 @@ enum class ItemUsage
 class CollectItemTriggerComponent : public TriggerComponent
 {
 public:
-	CollectItemTriggerComponent() { }
+	CollectItemTriggerComponent() : m_ItemUsage(ItemUsage::AddPoints) { }
 	~CollectItemTriggerComponent() { }
 
 	bool VInit(const XmlNode &configNode) override

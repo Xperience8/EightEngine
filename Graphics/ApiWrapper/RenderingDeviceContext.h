@@ -11,7 +11,7 @@ class RenderingDevice;
 class RenderingDeviceContext : public D3D11RenderingDeviceContext
 {
 public:
-	RenderingDeviceContext(Microsoft::WRL::ComPtr<ID3D11DeviceContext> &pContext3D)
+	explicit RenderingDeviceContext(Microsoft::WRL::ComPtr<ID3D11DeviceContext> &pContext3D)
 		: D3D11RenderingDeviceContext(pContext3D) { }
 	~RenderingDeviceContext() { }
 	

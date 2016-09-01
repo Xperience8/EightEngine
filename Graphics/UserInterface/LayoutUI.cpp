@@ -9,7 +9,7 @@ void LayoutUI::KeyDown(UINT keyCode)
 }
 void LayoutUI::MoveEvent(const DirectX::XMFLOAT3 &movingDirection)
 {
-	EIGHT_ASSERT(movingDirection.z >= -1.f || movingDirection.z <= 1.f,
+	EIGHT_ASSERT(!(movingDirection.z < -1.f || movingDirection.z > 1.f),
 		"Moving direction must be in <-1, 1> range");
 
 	m_ClickableGuiElements[m_SelectedGuiElement]->VHighLightOff();

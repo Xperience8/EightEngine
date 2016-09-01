@@ -10,6 +10,8 @@ struct PhysicDesc
 	float LinearDamping;
 	float AngularDamping;
 	float Density;
+
+	PhysicsDesc() : LinearDamping(0.f), AngularDamping(0.f), Density(0.f) { }
 };
 
 class PhysicsComponent : public IActorComponent
@@ -67,6 +69,6 @@ protected:
 
 	std::weak_ptr<Actor> m_pParentActor;
 	
-	PhysicsComponent() { }
+	PhysicsComponent() : m_Description(PhysicDesc()) { }
 	~PhysicsComponent() { }
 };

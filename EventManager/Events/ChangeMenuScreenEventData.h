@@ -9,7 +9,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	ChangeMenuScreenEventData(UINT newMenuScreen) : m_NewMenuScreen(newMenuScreen) { }
+	explicit ChangeMenuScreenEventData(UINT newMenuScreen) : m_NewMenuScreen(newMenuScreen) { }
 	//ChangeMenuScreenEventData() { }
 	~ChangeMenuScreenEventData() { }
 

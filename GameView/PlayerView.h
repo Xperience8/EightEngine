@@ -9,7 +9,7 @@
 class PlayerView : public IGameView
 {
 public:
-	PlayerView(std::weak_ptr<Actor> &pActor) : m_pActor(pActor), m_DebugCamera(false) { }
+	explicit PlayerView(std::weak_ptr<Actor> &pActor) : m_pActor(pActor), m_DebugCamera(false) { }
 	~PlayerView() { }
 
 	// Register events which can be handled by player view and player controller

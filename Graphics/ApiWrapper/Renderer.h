@@ -38,7 +38,7 @@ private:
 
 	void ActivateDebugRendering(const EventPtr<IEventData> &pEvent);
 public:
-	Renderer() : m_DebugRenderingStatus(false) { }
+	Renderer() : m_DebugRenderingStatus(false), m_pRenderTarget(nullptr) { }
 	~Renderer() { }
 
 	bool StartUp(const XmlNode &configNode, const std::shared_ptr<Screen> &pScreen);

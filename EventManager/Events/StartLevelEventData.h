@@ -19,7 +19,7 @@ private:
 public:
 	static const ULONG s_TYPE;
 
-	StartLevelEventData(const std::string &levelName) : m_LevelName(levelName) { }
+	explicit StartLevelEventData(const std::string &levelName) : m_LevelName(levelName) { }
 	~StartLevelEventData() { }
 
 	const std::string &GetLevelName() const { return m_LevelName; }

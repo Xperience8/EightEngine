@@ -10,7 +10,7 @@ class IEventData;
 class MenuView : public IGameView
 {
 public:
-	MenuView(std::weak_ptr<Actor> &pActor) : m_pActor(pActor) { }
+	explicit MenuView(std::weak_ptr<Actor> &pActor) : m_pActor(pActor) { }
 	~MenuView() { }
 
 	// Save pointer to event manager so we can send event to destroying this menu 
@@ -47,7 +47,7 @@ protected:
 class MainMenuView : public MenuView
 {
 public:
-	MainMenuView(std::weak_ptr<Actor> &pActor) : MenuView(pActor) { }
+	explicit MainMenuView(std::weak_ptr<Actor> &pActor) : MenuView(pActor) { }
 	~MainMenuView();
 
 	void VOnRestore() override
