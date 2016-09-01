@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GameAppLayer">
+      <UniqueIdentifier>{f1186f83-bbc9-4144-a0c2-b2638e69881d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Msvc">
+      <UniqueIdentifier>{784e2dae-5da6-41b8-8b29-26ef5b4e0c0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Memory">
+      <UniqueIdentifier>{66926097-1969-4cbb-a52e-b06f0080d617}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{c62b23d7-1c14-4b95-9780-597e5ecf4059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Cache">
+      <UniqueIdentifier>{b9b26875-3d88-43cf-9741-af8204e920f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty">
+      <UniqueIdentifier>{e9292a43-f763-4403-9553-774c3b1ec44a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdParty\XML">
+      <UniqueIdentifier>{0142cb1d-231b-4e59-8126-b23d2beec07c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameView">
+      <UniqueIdentifier>{23c12f23-24b4-47d7-bf65-fdb71c8ffa62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameLogic">
+      <UniqueIdentifier>{da06a1b9-5591-4a87-8fad-13057a7c1e0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{8d8e42f9-97ad-4e28-b3b8-afe096de82ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor">
+      <UniqueIdentifier>{85919209-cabf-452e-9b1d-239e168bcc84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EventManager">
+      <UniqueIdentifier>{5b05960a-71b1-4567-b7b4-af21cff0b5a2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\GameAppLayer\Screen.h">
+      <Filter>GameAppLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAppLayer\GameApp.h">
+      <Filter>GameAppLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Memory\MemoryManager.h">
+      <Filter>Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Renderer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\ResourceCache.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\XML\rapidxml.hpp">
+      <Filter>3rdParty\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\XML\rapidxml_iterators.hpp">
+      <Filter>3rdParty\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\XML\rapidxml_print.hpp">
+      <Filter>3rdParty\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\3rdParty\XML\rapidxml_utils.hpp">
+      <Filter>3rdParty\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\XMLResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\XMLResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\IResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\IResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Effect.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Shaders.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11EffectCache.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAppLayer\Helper.h">
+      <Filter>GameAppLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\DefaultResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\DefaultResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\GameCamera.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameLogic\GameLogic.h">
+      <Filter>GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\ISceneNode.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\TextureResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\TextureResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\DDSTextureLoader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\Scene.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11ConstantBufferCache.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\Actor.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\ActorFactory.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\IActorComponent.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EventManager\EventManager.h">
+      <Filter>EventManager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\SceneNode.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\RootNode.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\TransformComponent.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\RenderComponent.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\PlayerView.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\IGameView.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameView\PlayerController.h">
+      <Filter>GameView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameAppLayer\Timer.h">
+      <Filter>GameAppLayer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\ModelResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\ModelResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Mesh.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Material.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Sky.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Actor\PhysicsComponent.h">
+      <Filter>Actor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GameLogic\GamePhysics.h">
+      <Filter>GameLogic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Texture.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\ShaderResourceHandle.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ResourceCache\ShaderResourceLoader.h">
+      <Filter>Resource Cache</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Model.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11SubsetTable.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Graphics\D3D11Terrain.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\GameAppLayer\Screen.cpp">
+      <Filter>GameAppLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameAppLayer\GameApp.cpp">
+      <Filter>GameAppLayer</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Msvc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Renderer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ResourceCache\ResourceCache.cpp">
+      <Filter>Resource Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Effect.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11EffectCache.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameView\GameCamera.cpp">
+      <Filter>GameView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\DDSTextureLoader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Actor\ActorFactory.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameLogic\GameLogic.cpp">
+      <Filter>GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EventManager\EventManager.cpp">
+      <Filter>EventManager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Actor\TransformComponent.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameView\Scene.cpp">
+      <Filter>GameView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Actor\RenderComponent.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameView\PlayerController.cpp">
+      <Filter>GameView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameView\PlayerView.cpp">
+      <Filter>GameView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Mesh.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Material.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Sky.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ResourceCache\ModelResourceLoader.cpp">
+      <Filter>Resource Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Actor\PhysicsComponent.cpp">
+      <Filter>Actor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GameLogic\GamePhysics.cpp">
+      <Filter>GameLogic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ResourceCache\ShaderResourceLoader.cpp">
+      <Filter>Resource Cache</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Graphics\D3D11Terrain.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Shaders\SkyVS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\SkyPS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainVS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainHS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainDS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainPS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TestVS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TestPS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\BasicVS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\BasicPS.hlsl">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shaders\LightHelper.hlsli">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

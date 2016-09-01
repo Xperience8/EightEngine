@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C62CE914-112B-4534-8932-9EB38A8AC903}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MarbleMaze</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\Test\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\..\Temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\Test\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>..\..\Temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Game\$(Platform)\</OutDir>
+    <IntDir>..\..\Temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\Game\$(Platform)\</OutDir>
+    <IntDir>..\..\Temp\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Patrik\Documents\Visual Studio 2013\Projects\MarbleMaze\Trunk\Source\Msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)Trunk\Assets\DefaultAssets.PAK" "$(TargetDir)DefaultAssets.PAK"
+copy /Y "$(SolutionDir)Trunk\Assets\MarbleMazeConfig.xml" "$(TargetDir)MarbleMazeConfig.xml"
+xcopy "$(SolutionDir)Trunk\Assets\Language" "$(TargetDir)Language\" /e /y /i /r
+</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)Shaders/%(Filename).cso</ObjectFileOutput>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Patrik\Documents\Visual Studio 2013\Projects\MarbleMaze\Trunk\Source\Msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)Trunk\Assets\DefaultAssets.PAK" "$(TargetDir)DefaultAssets.PAK"
+copy /Y "$(SolutionDir)Trunk\Assets\MarbleMazeConfig.xml" "$(TargetDir)MarbleMazeConfig.xml"
+xcopy "$(SolutionDir)Trunk\Assets\Language" "$(TargetDir)Language\" /e /y /i /r
+</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)Shaders/%(Filename).cso</ObjectFileOutput>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Patrik\Documents\Visual Studio 2013\Projects\MarbleMaze\Trunk\Source\Msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)Trunk\Assets\DefaultAssets.PAK" "$(TargetDir)DefaultAssets.PAK"
+copy /Y "$(SolutionDir)Trunk\Assets\MarbleMazeConfig.xml" "$(TargetDir)MarbleMazeConfig.xml"
+xcopy "$(SolutionDir)Trunk\Assets\Language" "$(TargetDir)Language\" /e /y /i /r
+</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)Shaders/%(Filename).cso</ObjectFileOutput>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Patrik\Documents\Visual Studio 2013\Projects\MarbleMaze\Trunk\Source\Msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+    </Link>
+    <Xdcmake>
+      <OutputFile>$(IntDir)$(TargetName).xml</OutputFile>
+    </Xdcmake>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy /Y "$(SolutionDir)Trunk\Assets\DefaultAssets.PAK" "$(TargetDir)DefaultAssets.PAK"
+copy /Y "$(SolutionDir)Trunk\Assets\MarbleMazeConfig.xml" "$(TargetDir)MarbleMazeConfig.xml"
+xcopy "$(SolutionDir)Trunk\Assets\Language" "$(TargetDir)Language\" /e /y /i /r
+</Command>
+    </PostBuildEvent>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>$(OutDir)Shaders/%(Filename).cso</ObjectFileOutput>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\3rdParty\XML\rapidxml.hpp" />
+    <ClInclude Include="..\3rdParty\XML\rapidxml_iterators.hpp" />
+    <ClInclude Include="..\3rdParty\XML\rapidxml_print.hpp" />
+    <ClInclude Include="..\3rdParty\XML\rapidxml_utils.hpp" />
+    <ClInclude Include="..\Actor\Actor.h" />
+    <ClInclude Include="..\Actor\PhysicsComponent.h" />
+    <ClInclude Include="..\Actor\RenderComponent.h" />
+    <ClInclude Include="..\Actor\IActorComponent.h" />
+    <ClInclude Include="..\Actor\ActorFactory.h" />
+    <ClInclude Include="..\Actor\TransformComponent.h" />
+    <ClInclude Include="..\EventManager\EventManager.h" />
+    <ClInclude Include="..\GameAppLayer\GameApp.h" />
+    <ClInclude Include="..\GameAppLayer\Helper.h" />
+    <ClInclude Include="..\GameAppLayer\Screen.h" />
+    <ClInclude Include="..\GameAppLayer\Timer.h" />
+    <ClInclude Include="..\GameLogic\GameLogic.h" />
+    <ClInclude Include="..\GameLogic\GamePhysics.h" />
+    <ClInclude Include="..\GameView\GameCamera.h" />
+    <ClInclude Include="..\GameView\IGameView.h" />
+    <ClInclude Include="..\GameView\ISceneNode.h" />
+    <ClInclude Include="..\GameView\PlayerController.h" />
+    <ClInclude Include="..\GameView\PlayerView.h" />
+    <ClInclude Include="..\GameView\RootNode.h" />
+    <ClInclude Include="..\GameView\Scene.h" />
+    <ClInclude Include="..\GameView\SceneNode.h" />
+    <ClInclude Include="..\Graphics\D3D11ConstantBufferCache.h" />
+    <ClInclude Include="..\Graphics\D3D11EffectCache.h" />
+    <ClInclude Include="..\Graphics\D3D11Material.h" />
+    <ClInclude Include="..\Graphics\D3D11Mesh.h" />
+    <ClInclude Include="..\Graphics\D3D11Model.h" />
+    <ClInclude Include="..\Graphics\D3D11Renderer.h" />
+    <ClInclude Include="..\Graphics\D3D11Effect.h" />
+    <ClInclude Include="..\Graphics\D3D11Shaders.h" />
+    <ClInclude Include="..\Graphics\D3D11Sky.h" />
+    <ClInclude Include="..\Graphics\D3D11SubsetTable.h" />
+    <ClInclude Include="..\Graphics\D3D11Terrain.h" />
+    <ClInclude Include="..\Graphics\D3D11Texture.h" />
+    <ClInclude Include="..\Graphics\DDSTextureLoader.h" />
+    <ClInclude Include="..\Memory\MemoryManager.h" />
+    <ClInclude Include="..\ResourceCache\DefaultResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\DefaultResourceLoader.h" />
+    <ClInclude Include="..\ResourceCache\IResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\IResourceLoader.h" />
+    <ClInclude Include="..\ResourceCache\ModelResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\ModelResourceLoader.h" />
+    <ClInclude Include="..\ResourceCache\ResourceCache.h" />
+    <ClInclude Include="..\ResourceCache\ShaderResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\ShaderResourceLoader.h" />
+    <ClInclude Include="..\ResourceCache\TextureResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\TextureResourceLoader.h" />
+    <ClInclude Include="..\ResourceCache\XMLResourceHandle.h" />
+    <ClInclude Include="..\ResourceCache\XMLResourceLoader.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Actor\ActorFactory.cpp" />
+    <ClCompile Include="..\Actor\PhysicsComponent.cpp" />
+    <ClCompile Include="..\Actor\RenderComponent.cpp" />
+    <ClCompile Include="..\Actor\TransformComponent.cpp" />
+    <ClCompile Include="..\EventManager\EventManager.cpp" />
+    <ClCompile Include="..\GameAppLayer\GameApp.cpp" />
+    <ClCompile Include="..\GameAppLayer\Screen.cpp" />
+    <ClCompile Include="..\GameLogic\GameLogic.cpp" />
+    <ClCompile Include="..\GameLogic\GamePhysics.cpp" />
+    <ClCompile Include="..\GameView\GameCamera.cpp" />
+    <ClCompile Include="..\GameView\PlayerController.cpp" />
+    <ClCompile Include="..\GameView\PlayerView.cpp" />
+    <ClCompile Include="..\GameView\Scene.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Effect.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Material.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Mesh.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Renderer.cpp" />
+    <ClCompile Include="..\Graphics\D3D11EffectCache.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Sky.cpp" />
+    <ClCompile Include="..\Graphics\D3D11Terrain.cpp" />
+    <ClCompile Include="..\Graphics\DDSTextureLoader.cpp" />
+    <ClCompile Include="..\ResourceCache\ModelResourceLoader.cpp" />
+    <ClCompile Include="..\ResourceCache\ResourceCache.cpp" />
+    <ClCompile Include="..\ResourceCache\ShaderResourceLoader.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Shaders\BasicPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\BasicVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\SkyPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\SkyVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainDS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Domain</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainHS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Hull</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TerrainVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TestPS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="..\Shaders\TestVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Shaders\LightHelper.hlsli" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
